@@ -1,0 +1,14 @@
+package $!crudNameBean.daoInterfacePakcage;
+
+import java.util.List;
+
+public class $!crudNameBean.daoInterfaceName{
+
+    List<$!crudNameBean.beanClassName> $!crudNameBean.selectMethodName ($!crudNameBean.beanClassName $!crudNameBean.objName);
+
+    Integer $!crudNameBean.updateMethodName ($!crudNameBean.beanClassName $!crudNameBean.objName);
+
+    Integer $!crudNameBean.deleteMethodName (int id);
+
+    Integer $!crudNameBean.insertMethodName ($!crudNameBean.beanClassName $!crudNameBean.objName);
+}

@@ -1,0 +1,9 @@
+    <update id="$!crudName.updateMethodName" parameterType="$!crudName.beanClassName">
+        UPDATE $!tableName
+	    <set>
+#foreach($i in $!fieldList)
+ 	        $!{i.fieldName} = #{$!{i.alias}}#if($!{velocityCount} != $!{fieldList.size()}), #end
+  
+#end
+	    </set>
+    </update>

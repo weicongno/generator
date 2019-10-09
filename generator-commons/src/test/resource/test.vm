@@ -1,0 +1,3 @@
+#foreach($i in $!text.toCharArray())
+#set($isUpper=$letterUtils.isUpperLetter($i))
+#if($isUpper && 1 != $!{velocityCount}) $i#else$i#end#end

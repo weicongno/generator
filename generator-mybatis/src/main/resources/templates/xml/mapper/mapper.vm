@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="$!crudName.daoInterfacePakcage.$!crudName.daoInterfaceName">
+    <sql id="fields">
+#foreach($i in $!fieldList)
+        $!tableAlign.$!{i.fieldName} $!{i.alias}#if($!{velocityCount} != $!{fieldList.size()}), #end
+	
+#end
+    </sql>
+
+    <sql id="queryWhere">
+#foreach($i in $!fieldList)
+        <if test="null != $!{i.alias} and '' != $!{i.alias}">
+            AND $!tableAlign.$!{i.fieldName} = #{$!{i.alias}}
+        </if>
+#end
+    </sql>
+    
+#parse("templates/xml/mapper/element-select.vm")
+	
+#parse("templates/xml/mapper/element-insert.vm")
+	
+#parse("templates/xml/mapper/element-update.vm")
+	
+#parse("templates/xml/mapper/element-delete.vm")
+	
+</mapper>

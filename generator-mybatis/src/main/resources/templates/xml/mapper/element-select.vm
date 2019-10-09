@@ -1,0 +1,6 @@
+    <select id="$!crudName.selectMethodName" parameterType="$!crudName.beanClassName" resultType="$!crudName.beanClassName">
+        SELECT
+            <include refid="fields"/>
+        FROM
+            $!tableName $!tableAlign
+    </select>

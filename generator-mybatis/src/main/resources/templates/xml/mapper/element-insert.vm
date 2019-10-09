@@ -1,0 +1,14 @@
+    <insert id="$!crudName.insertMethodName" parameterType="$!crudName.beanClassName">
+        INSERT INTO $!tableName(
+#foreach($i in $!fieldList)
+            $!{i.fieldName}#if($!{velocityCount} != $!{fieldList.size()}), #end 
+  
+#end
+	    )
+        VALUES(
+#foreach($i in $!fieldList)
+            #{$!{i.alias}}#if($!{velocityCount} != $!{fieldList.size()}), #end
+  
+#end
+        )
+    </insert>

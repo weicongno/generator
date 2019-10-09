@@ -1,0 +1,10 @@
+package $!crudNameBean.beanPackage;
+
+public class $!crudNameBean.beanName{
+#foreach($i in $fieldList)
+    /**
+     * $!i.comment
+     */
+    private $!i.dataType $!i.fieldName;
+#end
+}
