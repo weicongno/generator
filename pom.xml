@@ -22,11 +22,6 @@
 
     <packaging>pom</packaging>
     <dependencies>
-        <dependency>
-            <artifactId>notepad-commons</artifactId>
-            <groupId>com.weicongno.notepad.commons</groupId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
