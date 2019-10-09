@@ -1,10 +1,22 @@
 package $!crudNameBean.beanPackage;
 
+#foreach($i in $!importClassList)
+import $!i
+#end
+
+#foreach($i in $!classAnnotaionList)
+$!i.toString()
+#end
 public class $!crudNameBean.beanName{
+
 #foreach($i in $fieldList)
     /**
      * $!i.comment
      */
+#foreach($a in $!i.annotationList)
+    $!a.toString()
+#end
     private $!i.dataType $!i.fieldName;
+
 #end
 }

@@ -1,5 +1,10 @@
 package com.weicongno.generator.commons.util;
 
+import org.apache.commons.collections.CollectionUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 类型转换类
  * @version 1.0 createTime:2019/5/8 15:46
@@ -206,4 +211,25 @@ public class Convert {
     public static Float toFloat(Object value){
         return toFloat(value, null);
     }
+
+    /**
+     * 集合转字符串
+     * @param list
+     * @param symbol
+     * @return
+     */
+    public static String listToString(List<String> list, String symbol){
+        if(CollectionUtils.isEmpty(list)){
+            return null;
+        }
+        StringBuilder append = new StringBuilder();
+        for(int i = 0; i < list.size(); i++){
+            append.append(list.get(i));
+            if(i != list.size() - 1){
+                append.append(symbol);
+            }
+        }
+        return append.toString();
+    }
+
 }

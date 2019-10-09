@@ -1,5 +1,7 @@
 package com.weicongno.generator.java.bean;
 
+import java.util.List;
+
 /**
  * java中的字段信息
  * @version 1.0 createTime:2019/6/25 17:00
@@ -21,6 +23,8 @@ public class FieldBean {
      * 注释
      */
     private String comment;
+
+    private List<AnnotationBean> annotationList;
 
     public String getFieldName() {
         return fieldName;
@@ -44,5 +48,13 @@ public class FieldBean {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public List<AnnotationBean> getAnnotationList() {
+        return annotationList;
+    }
+
+    public void setAnnotationList(List<AnnotationBean> annotationList) {
+        this.annotationList = annotationList;
     }
 }

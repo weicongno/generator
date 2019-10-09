@@ -2,7 +2,7 @@
 #   {}是生成时会赋予一些参数如name=实体类名称，moduleName=模块名
 jdbc:
   driver: com.mysql.jdbc.Driver
-  #url: jdbc:mysql://localhost:3306/notepadv1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+  url: jdbc:mysql://localhost:3306/notepadv1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
   username: root
   password: root
 
@@ -16,6 +16,8 @@ format:
   underline-cast: true
   #是否全部转换成小写
   lower-cast: false
+  #是否启用mybatis-plus，启用后会在实体类中加入注解
+  enabled-mybatis-plus: true
   #生成的部分java代码的格式
   java-code:
     #mapper中部分参数格式

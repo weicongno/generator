@@ -22,6 +22,11 @@ public class FormatBean {
      */
     private JavaCodeBean javaCode;
 
+    /**
+     * 是否启用Mybatis-plus
+     */
+    private Boolean enabledMybatisPlus;
+
     public Boolean getUnderlineCast() {
         return underlineCast;
     }
@@ -44,5 +49,13 @@ public class FormatBean {
 
     public void setJavaCode(JavaCodeBean javaCode) {
         this.javaCode = javaCode;
+    }
+
+    public Boolean getEnabledMybatisPlus() {
+        return enabledMybatisPlus;
+    }
+
+    public void setEnabledMybatisPlus(Boolean enabledMybatisPlus) {
+        this.enabledMybatisPlus = enabledMybatisPlus;
     }
 }

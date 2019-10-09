@@ -1,7 +1,5 @@
 package com.weicongno.generator.db.bean;
 
-import com.weicongno.generator.db.alias.Alias;
-
 /**
  * 数据库中表的字段bean
  * @version 1.0 createTime:2019/5/7 14:06
