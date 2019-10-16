@@ -7,7 +7,7 @@ import java.util.List;
  * @version 1.0 createTime:2019/8/15 10:57
  * @author:weicong
  */
-public class interfaceBean {
+public class InterfaceBean {
 
     /**
      * 标志
@@ -38,6 +38,12 @@ public class interfaceBean {
      * 请求方式
      */
     private String method;
+
+    private Integer finish;
+
+    private Integer sort;
+
+
 
     public String getFlag() {
         return flag;
@@ -85,5 +91,21 @@ public class interfaceBean {
 
     public void setMethod(String method) {
         this.method = method;
+    }
+
+    public Integer getFinish() {
+        return finish;
+    }
+
+    public void setFinish(Integer finish) {
+        this.finish = finish;
+    }
+
+    public Integer getSort() {
+        return sort;
+    }
+
+    public void setSort(Integer sort) {
+        this.sort = sort;
     }
 }

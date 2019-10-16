@@ -1,10 +1,13 @@
 package com.weicongno.generator;
 
+import com.weicongno.generator.commons.json.JsonUtils;
 import com.weicongno.generator.commons.util.CRUDNameBean;
 import com.weicongno.generator.commons.util.YamlCRUDNameCreateor;
 import com.weicongno.generator.db.DbTableReader;
 import com.weicongno.generator.db.bean.TableBean;
 import com.weicongno.generator.db.enums.DbTypeEnum;
+import com.weicongno.generator.doclever.DOCleverBeanGenerator;
+import com.weicongno.generator.doclever.bean.InterfaceBean;
 import com.weicongno.generator.java.JavaBeanGenerator;
 import com.weicongno.generator.java.JavaDaoGenerator;
 import com.weicongno.generator.java.SimpleJavaBeanGenerator;
@@ -23,18 +26,18 @@ public class CodeApp {
     /**
      * 表名;
      */
-    public static final String TABLE_NAME = "np_db_table";
+    public static final String TABLE_NAME = "sys_bid_evaluation_method";
 
 
     /**
      * bean的名称
      */
-    public static final String BEAN_NAME = "Table";
+    public static final String BEAN_NAME = "User";
 
     /**
      * 业务模块名称
      */
-    public static final String SERVICE_NAME = "db";
+    public static final String SERVICE_NAME = "system";
 
     /**
      * 数据库类型
@@ -51,6 +54,14 @@ public class CodeApp {
         System.out.println(dao);
         System.out.println(javaBean);
         System.out.println(mapper);
+
+        outputDOCleverBean(tableBean);
+    }
+
+    public static void outputDOCleverBean(TableBean tableBean){
+        DOCleverBeanGenerator doCleverBeanGenerator = new DOCleverBeanGenerator();
+        InterfaceBean interfaceBean = doCleverBeanGenerator.geenratorBean(tableBean);
+        System.out.println(JsonUtils.toString(interfaceBean));
     }
 
     /**

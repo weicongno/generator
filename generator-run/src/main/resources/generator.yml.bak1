@@ -2,28 +2,28 @@
 #   {}是生成时会赋予一些参数如name=实体类名称，moduleName=模块名
 jdbc:
   driver: com.mysql.jdbc.Driver
-  url: jdbc:mysql://10.254.193.155:3306/base_material?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+  url: jdbc:mysql://localhost:3306/notepadv1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
   username: root
   password: root
 
 #全局参数配置
 global:
-  package: com.crecgec.basedataservice
+  package: com.weicongno
 
 #生成出来的格式配置
 format:
   #是否开启驼峰式
   underline-cast: true
   #是否全部转换成小写
-  lower-cast: false
+  lower-cast: true
   #是否启用mybatis-plus，启用后会在实体类中加入注解
-  enabled-mybatis-plus: true
+  enabled-mybatis-plus: false
   #生成的部分java代码的格式
   java-code:
     #mapper中部分参数格式
     mapper:
       #mapper接口的包名格式
-      package: '${global.package}.{moduleName}.mapper'
+      package: '${global.package}.mapper.{moduleName}'
       #mapper接口名称
       className: '{name}Mapper'
     method:
@@ -34,6 +34,6 @@ format:
     #生成实体类的格式
     bean:
       #实体类包名格式
-      package: '${global.package}.common.{moduleName}.entity'
+      package: '${global.package}.server.{moduleName}.bean'
       #实体类 类名格式
-      className: '{name}'
+      className: '{name}Bean'

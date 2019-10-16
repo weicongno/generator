@@ -35,7 +35,7 @@ public class FieldUtils {
 
         DB_DATA_TYPE_MAP.put("INT", DataTypeEnum.INTEGER);
         DB_DATA_TYPE_MAP.put("NUMBER", DataTypeEnum.INTEGER);
-        DB_DATA_TYPE_MAP.put("BIGINT", DataTypeEnum.INTEGER);
+        DB_DATA_TYPE_MAP.put("BIGINT", DataTypeEnum.LONG);
         DB_DATA_TYPE_MAP.put("TINYINT", DataTypeEnum.INTEGER);
 
 

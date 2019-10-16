@@ -31,7 +31,12 @@ public enum DataTypeEnum {
     /**
      * 布尔使用的数据类型
      */
-    BOOLEAN("java.lang.Boolean");
+    BOOLEAN("java.lang.Boolean"),
+
+    /**
+     * 长整型
+     */
+    LONG("java.lang.Long");
 
     DataTypeEnum(String dataType) {
         this.dataType = dataType;
