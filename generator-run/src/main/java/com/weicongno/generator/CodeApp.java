@@ -26,18 +26,18 @@ public class CodeApp {
     /**
      * 表名;
      */
-    public static final String TABLE_NAME = "sys_bid_evaluation_method";
+    public static final String TABLE_NAME = "em_aptitude";
 
 
     /**
      * bean的名称
      */
-    public static final String BEAN_NAME = "User";
+    public static final String BEAN_NAME = "Aptitude";
 
     /**
      * 业务模块名称
      */
-    public static final String SERVICE_NAME = "system";
+    public static final String SERVICE_NAME = "expertinfo";
 
     /**
      * 数据库类型

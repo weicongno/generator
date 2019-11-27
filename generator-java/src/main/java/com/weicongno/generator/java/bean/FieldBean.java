@@ -24,6 +24,11 @@ public class FieldBean {
      */
     private String comment;
 
+    /**
+     * 数据类型包名
+     */
+    private String dataTypePackage;
+
     private List<AnnotationBean> annotationList;
 
     public String getFieldName() {
@@ -56,5 +61,13 @@ public class FieldBean {
 
     public void setAnnotationList(List<AnnotationBean> annotationList) {
         this.annotationList = annotationList;
+    }
+
+    public String getDataTypePackage() {
+        return dataTypePackage;
+    }
+
+    public void setDataTypePackage(String dataTypePackage) {
+        this.dataTypePackage = dataTypePackage;
     }
 }

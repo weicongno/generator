@@ -73,7 +73,15 @@ public class SimpleJavaBeanGenerator implements JavaBeanGenerator{
      * @return
      */
     public com.weicongno.generator.java.bean.FieldBean convertDbField(FieldBean fieldBean){
-        String dataType = FieldUtils.castDataType(fieldBean);
+        String type = FieldUtils.castDataType(fieldBean);
+        String dataType = null;
+        String dataTypePackage = null;
+        Integer offset = type.lastIndexOf(".");
+        //分离包名和类名
+        if(-1 != offset){
+            dataType = type.substring(offset + 1, type.length());
+            dataTypePackage = type.substring(0, offset);
+        }
         com.weicongno.generator.java.bean.FieldBean javaFieldBean = new com.weicongno.generator.java.bean.FieldBean();
         javaFieldBean.setDataType(dataType);
         javaFieldBean.setComment(fieldBean.getCommonet());

@@ -17,6 +17,7 @@ import java.beans.PropertyDescriptor;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -323,4 +324,10 @@ public class YamlUtils {
         }
     }
 
+    public static void main(String[] args){
+        Map<String, Object> jdbc = new HashMap<String, Object>();
+        Map<String, Object> pack = new HashMap<String, Object>();
+        jdbc.put("package", pack);
+        System.out.println(Ognl.getValue("package", jdbc));
+    }
 }

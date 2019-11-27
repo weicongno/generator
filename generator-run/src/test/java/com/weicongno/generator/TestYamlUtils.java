@@ -15,14 +15,14 @@ public class TestYamlUtils {
     @Test
     public void test(){
         YamlUtils yamlUtils = new YamlUtils();
-        Map map = yamlUtils.parseYaml("generator.yml.bak");
+        Map map = yamlUtils.parseYaml("generator.yml");
         System.out.println(map);
     }
 
     @Test
     public void test1(){
         YamlUtils yamlUtils = new YamlUtils();
-        Object o = yamlUtils.parseYamlAs("generator.yml.bak", ConfigBean.class);
+        Object o = yamlUtils.parseYamlAs("generator.yml", ConfigBean.class);
         System.out.println(o);
     }
 }

@@ -21,7 +21,7 @@ public class BeanUtils {
      * @throws InvocationTargetException
      */
     public static <T>T mapToBean(Map<String, Object> map, Class<T> beanClass) throws IllegalAccessException, InstantiationException, InvocationTargetException {
-        T bean = null;
+        T bean;
         bean = beanClass.newInstance();
         org.apache.commons.beanutils.BeanUtils.populate(bean, map);
         return bean;

@@ -1,6 +1,8 @@
 package com.weicongno.generator.commons.parsing;
 
 
+import org.apache.commons.lang.StringUtils;
+
 /**
  * 通用的token解析器
  * @version 1.0 createTime:2019/9/17 16:55
@@ -77,5 +79,9 @@ public class GenericTokenParser {
         } else {
             return "";
         }
+    }
+
+    public static void main(String[] args){
+        System.out.println(StringUtils.replace("123a$", "a$", "?"));
     }
 }
