@@ -73,7 +73,9 @@ public class FieldUtils {
                 dataTypeEnum = DataTypeEnum.DECIMAL;
             }
         }
-
+        if(null == dataTypeEnum){
+            return "java.lang.Object";
+        }
         return dataTypeEnum.getDataType();
     }
 }

@@ -1,0 +1,18 @@
+#set($objListName = $!crudName.objName + "List")
+    <insert id="$!crudName.insertMethodName" parameterType="$!crudName.beanClassName">
+        INSERT INTO $!tableName(
+#foreach($i in $!fieldList)
+            $!{i.fieldName}#if($!{velocityCount} != $!{fieldList.size()}), #end 
+  
+#end
+	    )
+        VALUES
+        <foreach collection="$objListName" item="item" separator=",">
+        (
+#foreach($i in $!fieldList)
+            #{item.$!{i.alias}}#if($!{velocityCount} != $!{fieldList.size()}), #end
+
+#end
+        )
+        </foreach>
+    </insert>

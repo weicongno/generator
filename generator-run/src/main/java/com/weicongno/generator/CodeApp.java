@@ -26,13 +26,13 @@ public class CodeApp {
     /**
      * 表名;
      */
-    public static final String TABLE_NAME = "em_aptitude";
+    public static final String TABLE_NAME = "np_db_table";
 
 
     /**
      * bean的名称
      */
-    public static final String BEAN_NAME = "Aptitude";
+    public static final String BEAN_NAME = "Table";
 
     /**
      * 业务模块名称

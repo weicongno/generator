@@ -23,7 +23,7 @@ format:
     #mapper中部分参数格式
     mapper:
       #mapper接口的包名格式
-      package: '${global.package}.mapper.{moduleName}'
+      package: '${global.package}.server.mapper.{moduleName}'
       #mapper接口名称
       className: '{name}Mapper'
     method:
@@ -31,9 +31,10 @@ format:
       select: 'query{name}ByParam'
       update: 'update{name}'
       insert: 'add{name}'
+      insertBatch: 'add{name}Batch'
     #生成实体类的格式
     bean:
       #实体类包名格式
-      package: '${global.package}.server.{moduleName}.bean'
+      package: '${global.package}.common.{moduleName}.entity'
       #实体类 类名格式
       className: '{name}Bean'

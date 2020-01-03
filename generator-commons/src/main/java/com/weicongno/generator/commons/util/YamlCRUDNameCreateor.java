@@ -7,6 +7,7 @@ import com.weicongno.generator.commons.config.bean.JavaCodeBean;
 import com.weicongno.generator.commons.ognl.Ognl;
 import com.weicongno.generator.commons.parsing.GenericTokenParser;
 import com.weicongno.generator.commons.parsing.TokenHandler;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class YamlCRUDNameCreateor {
         FormatBean formatBean = configBean.getFormat();
         JavaCodeBean javaCodeBean = formatBean.getJavaCode();
         CRUDNameBean crudNameBean = new CRUDNameBean();
-        crudNameBean.setObjName(name);
+        crudNameBean.setObjName(firstLowerCase(name));
 
         String beanName = parse(javaCodeBean.getBean().get("className"));
         String _package = parse(javaCodeBean.getBean().get("package"));
@@ -48,6 +49,7 @@ public class YamlCRUDNameCreateor {
         crudNameBean.setSelectMethodName(parse(methodMap.get("select")));
         crudNameBean.setUpdateMethodName(parse(methodMap.get("update")));
         crudNameBean.setDeleteMethodName(parse(methodMap.get("delete")));
+        crudNameBean.setInsertBatchMethodName(parse(methodMap.get("insertBatch")));
 
         Map<String, String> mapperMap = javaCodeBean.getMapper();
         crudNameBean.setDaoInterfacePakcage(parse(mapperMap.get("package")));
@@ -55,6 +57,17 @@ public class YamlCRUDNameCreateor {
         return crudNameBean;
     }
 
+    /**
+     * 开头小写
+     * @param word
+     * @return
+     */
+    public String firstLowerCase(String word){
+        if(StringUtils.isEmpty(word)){
+            return null;
+        }
+        return word.substring(0, 1).toLowerCase() + word.substring(1, word.length());
+    }
 
     public Map<String, Object> getContext(){
         Map<String, Object> context = new HashMap<String, Object>();
@@ -86,6 +99,8 @@ public class YamlCRUDNameCreateor {
             }
         };
     }
+
+
 
     public String getName() {
         return name;

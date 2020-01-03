@@ -39,6 +39,11 @@ public class CRUDNameBean {
     private String insertMethodName;
 
     /**
+     * 批量插入方法名称
+     */
+    private String insertBatchMethodName;
+
+    /**
      * 修改方法名称
      */
     private String updateMethodName;
@@ -149,5 +154,13 @@ public class CRUDNameBean {
 
     public void setDaoInterfacePakcage(String daoInterfacePakcage) {
         this.daoInterfacePakcage = daoInterfacePakcage;
+    }
+
+    public String getInsertBatchMethodName() {
+        return insertBatchMethodName;
+    }
+
+    public void setInsertBatchMethodName(String insertBatchMethodName) {
+        this.insertBatchMethodName = insertBatchMethodName;
     }
 }

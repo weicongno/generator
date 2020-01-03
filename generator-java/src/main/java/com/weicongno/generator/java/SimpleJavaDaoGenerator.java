@@ -11,7 +11,7 @@ import java.io.Writer;
 /**
  * 简单的java dao层代码生成
  * @version 1.0 createTime:2019/6/26 11:47
- * @authro:weicong
+ * @authro weicong
  */
 public class SimpleJavaDaoGenerator implements JavaDaoGenerator{
 

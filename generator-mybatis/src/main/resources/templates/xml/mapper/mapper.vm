@@ -25,5 +25,6 @@
 #parse("templates/xml/mapper/element-update.vm")
 	
 #parse("templates/xml/mapper/element-delete.vm")
-	
+
+#parse("templates/xml/mapper/element-insertBatch.vm")
 </mapper>
