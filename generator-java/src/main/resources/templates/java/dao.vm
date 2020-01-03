@@ -13,5 +13,5 @@ public class $!crudNameBean.daoInterfaceName{
 
     Integer $!crudNameBean.insertMethodName ($!crudNameBean.beanName $!crudNameBean.objName);
 
-    Integer $!crudNameBean.insertBatchMethodName (List<$!crudNameBean.beanName> $objListName);
+    Integer $!crudNameBean.insertBatchMethodName (@Param("$objListName") List<$!crudNameBean.beanName> $objListName);
 }
